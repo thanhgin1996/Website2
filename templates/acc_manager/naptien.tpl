@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+		<title><?php echo $description ?> - Donate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<!-- styles -->
+<link href="./assets/themes/lost-theme/images/favicon.ico" rel="icon">
+<link href="./assets/themes/css/app.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./assets/themes/plugins/toastr/css/toastr.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./assets/themes/lost-theme/css/main.css" media="screen" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito" media="screen" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta property="og:url" content="/" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sro Thiên Điểu"/>
+    <meta property="og:title" content="Sro Thiên Điểu - Season 2025" />
+    <meta property="og:image" content="./assets/themes/lost-theme/images/logo.png" />
+    <meta property="og:image:secure_url" content="./assets/themes/lost-theme/images/logo.png" />
+	<meta name="description" content="Play SRO is an old-school Cap 90 server that brings back the nostalgia of the real Silkroad experience. Our server is dedicated to preserving the essence of the old days, where you can relive the excitement and adventure that made Silkroad so special.">
+	<script>
+        document.addEventListener("keydown", function (e) {
+            // Nếu người dùng nhấn phím F12, ngăn chặn sự kiện
+            if (e.key === "F12" || e.keyCode === 123) {
+                e.preventDefault();
+            }if (e.ctrlKey && (e.key === "u" || e.keyCode === 85)) {
+                e.preventDefault();
+            }
+			 
+        });
+		  document.addEventListener("contextmenu", function (e) {
+            // Ngăn chặn sự kiện chuột phải
+            e.preventDefault();
+        });
+    </script>
+
+    </head>
+	    <style type="text/css">
+		 .image-container {
+            position: relative; /* Tạo một không gian để đặt văn bản lên trên ảnh */
+            width: 100%; /* Hoặc chiều rộng ảnh bạn muốn */
+            max-width: 200px; /* Giới hạn chiều rộng */
+            margin: auto;
+        }
+
+        .image-container img {
+            width: 100%; /* Làm cho ảnh chiếm hết chiều rộng của container */
+            height: auto; /* Giữ tỷ lệ khung hình */
+        }
+
+        .center-text {
+		
+		-webkit-user-select: none; /* Cho Chrome, Safari */
+            -moz-user-select: none; /* Cho Firefox */
+            -ms-user-select: none; /* Cho IE/Edge */
+            user-select: none; /* Chuẩn cho tất cả các trình duyệt */
+            position: absolute; /* Đặt text lên trên ảnh */
+            top: 50%; /* Canh giữa theo chiều dọc */
+            left: 50%; /* Canh giữa theo chiều ngang */
+            transform: translate(-50%, -50%); /* Dịch chuyển text để căn chính xác vào giữa */
+            color: black; /* Màu chữ */
+            font-size: 18px; /* Kích thước chữ */
+            font-weight: bold; /* Tùy chọn: đậm chữ */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Tạo bóng cho chữ */
+	
+        }
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style>.--savior-overlay-transform-reset {
+  transform: none !important;
+}
+.--savior-overlay-z-index-top {
+  z-index: 2147483643 !important;
+}
+.--savior-overlay-position-relative {
+  position: relative;
+}
+.--savior-overlay-position-static {
+  position: static !important;
+}
+.--savior-overlay-overflow-hidden {
+  overflow: hidden !important;
+}
+.--savior-overlay-overflow-x-visible {
+  overflow-x: visible !important;
+}
+.--savior-overlay-overflow-y-visible {
+  overflow-y: visible !important;
+}
+.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+.--savior-overlay-display-none {
+  display: none !important;
+}
+.--savior-overlay-clearfix {
+  clear: both;
+}
+.--savior-overlay-reset-filter {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+.--savior-tooltip-host {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+}
+/*Override css styles for Twitch.tv*/
+main.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+.modal__backdrop.--savior-overlay-z-index-reset {
+  position: static !important;
+}
+main.--savior-overlay-z-index-top {
+  z-index: auto !important;
+}
+main.--savior-overlay-z-index-top .channel-root__player-container + div,
+main.--savior-overlay-z-index-top .video-player-hosting-ui__container + div {
+  opacity: 0.1;
+}
+/*Dirty hack for facebook big video page e.g: https://www.facebook.com/abc/videos/...*/
+.--savior-backdrop {
+  position: fixed !important;
+  z-index: 2147483642 !important;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw !important;
+  background-color: rgba(0,0,0,0.9);
+}
+.--savior-overlay-twitter-video-player {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+.--savior-overlay-z-index-reset [class*="DivSideNavContainer"],
+.--savior-overlay-z-index-reset [class*="DivHeaderContainer"],
+.--savior-overlay-z-index-reset [class*="DivBottomContainer"],
+.--savior-overlay-z-index-reset [class*="DivCategoryListWrapper"],
+.--savior-overlay-z-index-reset [data-testid="sidebarColumn"],
+.--savior-overlay-z-index-reset header[role="banner"],
+.--savior-overlay-z-index-reset [data-testid="cellInnerDiv"]:not(.--savior-overlay-z-index-reset),
+.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:first-child,
+.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:nth-child(3) {
+  z-index: -1 !important;
+}
+.--savior-overlay-z-index-reset [data-testid="cellInnerDiv"] .--savior-backdrop+div {
+  z-index: 2147483643 !important;
+}
+.--savior-overlay-z-index-reset [data-testid="primaryColumn"]>[aria-label="Home timeline"] {
+  z-index: 0 !important;
+}
+.--savior-overlay-z-index-reset#mtLayer,
+.--savior-overlay-z-index-reset.media-layer {
+  z-index: 3000 !important;
+}
+.--savior-overlay-position-relative [class*="SecBar_secBar_"],
+.--savior-overlay-position-relative .woo-box-flex [class*="Frame_top_"] {
+  z-index: 0 !important;
+}
+.--savior-overlay-position-relative .vue-recycle-scroller__item-view:not(.--savior-overlay-z-index-reset),
+.--savior-overlay-position-relative .woo-panel-main[class*="BackTop_main_"],
+.--savior-overlay-position-relative [class*="Main_side_"] {
+  z-index: -1 !important;
+}
+/* Fix conflict css with zingmp3 */
+.zm-video-modal.--savior-overlay-z-index-reset {
+  position: absolute;
+}
+/* Dirty hack for xvideos99 */
+#page #main.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+/* Overlay for ok.ru */
+#vp_w.--savior-overlay-z-index-reset.media-layer.media-layer__video {
+  overflow-y: hidden;
+  z-index: 2147483643 !important;
+}
+/* Fix missing controller for tv.naver.com */
+.--savior-overlay-z-index-top.rmc_controller,
+.--savior-overlay-z-index-top.rmc_setting_intro,
+.--savior-overlay-z-index-top.rmc_highlight,
+.--savior-overlay-z-index-top.rmc_control_settings {
+  z-index: 2147483644 !important;
+}
+/* Dirty hack for douyi.com */
+.swiper-wrapper.--savior-overlay-z-index-reset .swiper-slide:not(.swiper-slide-active),
+.swiper-wrapper.--savior-overlay-transform-reset .swiper-slide:not(.swiper-slide-active) {
+  display: none;
+}
+.videoWrap + div > div {
+  pointer-events: unset;
+}
+/* Dirty hack for fpt.ai */
+.mfp-wrap.--savior-overlay-z-index-top {
+  position: relative;
+}
+.mfp-wrap.--savior-overlay-z-index-top .mfp-close {
+  display: none;
+}
+.mfp-wrap.--savior-overlay-z-index-top .mfp-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset + nav {
+  z-index: -1 !important;
+}
+section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset section.--savior-overlay-z-index-reset div.--savior-overlay-z-index-reset ~ div {
+  position: relative;
+}
+.watching-movie #video-player.--savior-overlay-z-index-top {
+  z-index: 2147483644 !important;
+}
+div[class^="tiktok"].--savior-overlay-z-index-reset {
+  z-index: 2147483644 !important;
+}
+.--savior-lightoff-fix section:not(:has([class*="--savior-overlay-"])),
+.--savior-lightoff-fix section.section_video ~ section {
+  z-index: -1;
+  position: relative;
+}
+.--savior-lightoff-fix header,
+.--savior-lightoff-fix footer,
+.--savior-lightoff-fix .top-header,
+.--savior-lightoff-fix .swiper-container,
+.--savior-lightoff-fix #to_top,
+.--savior-lightoff-fix #button-adblock {
+  z-index: -1 !important;
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style></head>
+<body dir="ltr" data-theme="switch">
+
+<div class="modal fade" id="modalStatus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalLabel">Status</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body text"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="myModalSearchLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalSearchLabel">Search</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body text">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="app">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-darken">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">
+				<!--<img src="./assets/themes/lost-theme/images/logo.png" alt="Golden Online" width="132" class="img-fluid" />-->
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+                    <li class="nav-item">
+            <a class="nav-link  "
+               href="/"
+                                            >
+                Trang Chủ                            </a>
+                    </li>
+                    <li class="nav-item">
+            <a class="nav-link  "
+               href="/index2.php?mod=download"
+                                            >
+                Tải Xuống                            </a>
+                    </li>
+                    <li class="nav-item">
+            <a class="nav-link  "
+               href="/index2.php?mod=rankingasia"
+                                            >
+                Bảng Xếp Hạng                            </a>
+                    </li>
+                            <li class="nav-item">
+            <a class="nav-link  "
+               href="/index2.php?mod=rules"
+                                            >
+                Nội Quy                            </a>
+                    </li>
+                    <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle "
+               href="/detail-tghj.html"
+                                data-toggle="dropdown"            >
+                Cẩm Nang Tân Thủ                <span class="caret"></span>            </a>
+                            <div class="dropdown-menu navbar-dropdown pr-0 pl-0" aria-labelledby="navbarDropdown">
+                                                                                        <a href="/index2.php?mod=cnttphimtat"
+                           class="dropdown-item"
+                             >
+                            Hệ Thống Phím Tắt                       </a>
+                                                                    
+                    </li>
+                    <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle "
+               href="/detail-tghj.html"
+                                data-toggle="dropdown"            >
+               Hệ Thống Nhiệm Vụ               <span class="caret"></span>            </a>
+                            <div class="dropdown-menu navbar-dropdown pr-0 pl-0" aria-labelledby="navbarDropdown">
+                        <a href="/index2.php?mod=nvtanthuchaua"
+                           class="dropdown-item">
+                            Tân Thủ - Châu Á</a>   
+						<a href="/index2.php?mod=nvtanthuchauau"
+                           class="dropdown-item">
+                            Tân Thủ - Châu Âu</a>	
+						<a href="/index2.php?mod=nvmorongruongdo"
+                           class="dropdown-item">
+                           Mở Rộng Rương Đồ</a>
+						<a href="/index2.php?mod=nvcapdo4180"
+                           class="dropdown-item">
+                            Cấp Độ (41 - 80)</a>
+						<a href="/index2.php?mod=nvlangkhacson"
+                           class="dropdown-item">
+                            Lạc Khắc Sơn</a>
+						<a href="/index2.php?mod=nvlaychiakhoaroc"
+                           class="dropdown-item">
+                            Chìa Khóa Róc</a>
+						<a href="/index2.php?mod=nvdanhhieu"
+                           class="dropdown-item">
+                             Danh Hiệu</a>
+						<a href="/index2.php?mod=nvlangmo"
+                           class="dropdown-item">
+                             Lăng Mộ Pharaoh</a>
+						<a href="/index2.php?mod=nvalexandria"
+                           class="dropdown-item">
+                             Thành Alexandria</a>
+						<a href="/index2.php?mod=nvlangtanthuyhoang"
+                           class="dropdown-item">
+                            Lăng Mộ Tần Thủy Hoàng</a>
+                                                         
+                    </li>
+            </ul>
+						 <?php
+if (!isset($_SESSION[sro_user])) {
+?>
+				<ul class="navbar-nav ml-auto">
+
+					
+						<li class="nav-item">
+							<a class="nav-link" href="/index2.php?mod=login">Đăng Nhập</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/index2.php?mod=regsiter">Đăng Ký</a>
+						</li>
+														</ul>
+
+<?php } 
+					else {
+					?>
+	<ul class="navbar-nav ml-auto">
+
+																<li class="nav-item dropdown">
+    <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre="">
+        <?php echo $_SESSION[sro_user] ?> <span class="caret"></span>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+<div class="dropdown-item-text text-warning">Silk: <?php echo number_format($_SESSION['cash'], 0, '.', '.');?></div>
+<div class="dropdown-item-text text-warning">Gift Silk: <?php echo number_format($_SESSION['cash1'], 0, '.', '.');?></div>
+<div class="dropdown-item-text text-warning">Point Silk: <?php echo number_format($_SESSION['cash2'], 0, '.', '.');?></div>
+        
+        <a class="nav-link  active" href="/index2.php?mod=login">
+               Bảng Điều Khiển           </a>
+           
+                                                        
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/index2.php?mod=logout">
+            Thoát        </a>
+    </div>
+</li>
+									</ul>
+					<?php 
+} ?>
+		
+			</div>
+		</div>
+	</nav>
+
+
+	<header class="header">
+		<div class="header-content">
+			<div class="header-text d-flex align-items-center justify-content-center">
+				<div class="container">
+					<div class="d-flex flex-column">
+						<div class="header-logo">
+							<a href="/">
+								<!--<img src="./assets/themes/lost-theme/images/logo.png" alt="Golden Online" class="img-fluid" width="556"/>-->
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<canvas class="sticky-bottom" id="wave"></canvas>
+	</header>
+
+	<main role="main">
+<div class="main-content">
+			<div class="container-fluid">
+				
+				
+	<div class="container">
+
+		
+		<div class="card">
+			<div class="card-body p-0 m-0">
+									 <?php
+if (!isset($_SESSION[sro_user])) {
+?>
+				<div class="row m-0 p-0">
+					<div class="col-lg-5 p-0 d-none d-lg-block">
+						<img src="/assets/themes/lost-theme/images/auth.png" class="img-fluid">
+					</div>
+					<div class="col-lg-7 p-0">
+
+						<div class="text-center">
+
+							<h3>Đăng Nhập</h3>
+							<div class="d-flex justify-content-center align-items-center h-100">
+								<div class="flex-fill content-card">
+
+									<div class="row justify-content-center ">
+										 <div class="col-10">
+											
+
+    <form name="login" id="login" action="" method="post">         	<input name="login" value="login" type="hidden">
+	<div class="mb-3">
+                    <label class="form-label"><label for="username">Tài Khoản</label></label>
+        
+                    <input name="username" placeholder="Nhập Tài Khoản" class="form-control" type="text" value="">            </div>
+        <div class="mb-3">
+                    <label class="form-label"><label for="password">Mật Khẩu</label></label>
+        
+                    <input name="password" placeholder="Nhập Mật Khẩu" class="form-control" type="password" value="">            </div>
+        <div class="mb-3">
+        
+            <button class="btn btn-primary" type="submit" name="Submit" value="">Đăng Nhập</button> 
+</form>
+										 </div>
+									</div>
+
+									<a href="/index2.php?mod=forgotpassword">Bạn Quên Mật Khẩu?</a></br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+<?php } 
+					else {
+					?>
+				<div class="row">
+        <div class="col-md-3">                                                                                                                                                                                                                                      <div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=acc_manager&act=changepassword">
+                        Đổi Mật Khẩu
+                    </a>
+                </div>
+                <div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=acc_manager&act=changepassword2">
+                      Đổi Mật Khẩu Cấp 2
+                    </a>
+                </div>
+                 <div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=acc_manager&act=changephone">
+                        Đổi Số Điện Thoại
+                    </a>
+                </div>  
+  <div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=acc_manager&act=changeemail">
+                        Đổi Email
+                    </a>
+                </div>	
+  <div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=acc_manager&act=resethpmp">
+                        Reset HP/MP
+                    </a>
+                </div>	
+ <div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=acc_manager&act=fixket">
+                        Fix Kẹt
+                    </a>
+                </div> 
+				<div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=acc_manager&act=naptien">
+                        Donate
+                    </a>
+                </div>	
+				<div class="d-grid my-2">
+                    <a class="btn btn-primary ranking-main-button w-100" href="/index2.php?mod=logout">
+                        Thoát
+                    </a>
+                </div>			
+                                    </div>
+									<div id="content-replace" class="col-md-9">
+            <h2 class="page-title">Donate</h2>
+ <form method="post" name="register" action="" id="register">
+			<input id="action" type="hidden" value="dangky" name="action">
+		  <label for="captcha" class="form-label">
+            *Bảng Giá Donate<span class="required-mark"></span>
+        </label>
+<table class="table table-striped">
+            <thead>
+            <tr>
+                <th>VND</th>
+                <th>Silk</th>
+            </tr>
+            </thead>
+                        <tbody>
+			<tr>
+                <td>100.000</td>
+                <td>2000</td>
+            </tr>
+             <tr>
+                <td>200.000</td>
+                <td>4000</td>
+            </tr>
+			  <tr>
+                <td>500.000</td>
+                <td>10000</td>
+            </tr>
+			  <tr>
+                <td>1.000.000</td>
+                <td>20000</td>
+            </tr>
+			  <tr>
+                <td>2.000.000</td>
+                <td>40000</td>
+            </tr>
+			  <tr>
+                <td>5.000.000</td>
+                <td>100000</td>
+            </tr>
+				  <tr>
+                <td>10.000.000</td>
+                <td>200000</td>
+            </tr>
+			<tr>
+                <td>Server chỉ có 1 giá nạp </td>
+                <td>x<?php echo $Promotion ?></td>
+            </tr>
+			<tr>
+                <td></td>
+                <td></td>
+            </tr>
+                    </tbody></table>			
+        <label for="captcha" class="form-label">
+            Nhập Số Tiền Cần Nạp.<span class="required-mark">*</span>
+        </label>
+		<div class="mb-3"> <input name="money" class="form-control" type="text" placeholder="Nhập mệnh giá" oninput="formatInput(this)" required="" value="" maxlength="12">            </div>
+      <button class="btn btn-primary" type="submit" name="SubmitCP" value="">Tạo Mã</button></br>
+<?php
+                if ($activeqr == 1) 
+                { ?>
+				<div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nạp Bank</th>
+                <th>Thông Tin Chuyển Khoản</th>
+            </tr>
+            </thead>
+                        <tbody>
+			<tr>
+                <td>Số Tài Khoản:</td>
+                <td><?php echo $stk ?></td>
+            </tr>
+             <tr>
+                <td>Ngân Hàng:</td>
+                <td><?php echo $nhdesc ?></td>
+            </tr>
+			<tr>
+                <td>Chủ Tài Khoản:</td>
+                <td><?php echo $ctk ?></td>
+            </tr>
+			<tr>
+                <td>Số Tiền:</td>
+                <td><?php echo $price ?></td>
+            </tr>
+			<tr>
+                <td>Silk Nhận Được:</td>
+                <td><?php echo number_format($priceshow, 0, ',', ',');?></td>
+            </tr>
+			<tr>
+                <td>Nội Dung:</td>
+                <td><?php echo $_SESSION['codebanking'] ?></td>
+            </tr>
+			<tr>
+                <td>QR CODE:</td>
+				     <td><img src="https://apiqr.web2m.com/api/generate/<?php echo $nh?>/<?php echo $stk?>/<?php echo $ctk?>?amount=<?php echo $pricegive?>&memo=<?php echo $_SESSION['codebanking'] ?>&is_mask=0&bg=" width="150" height="150"></br></br><span style="color: yellow; font-size: 18px;">*Mã Này Được Phép Sử Dụng Nhiều Lần Cho Tài Khoản Của Bạn.</span></br></td></td>
+            
+                </td>
+            </tr>
+			 <tr>
+                  <td>Hướng Dẫn</td>
+                  <td>Quét Mã QR Để Thực Hiện Chuyển Khoản Nhanh.</td>
+               </tr>
+			<tr>
+                <td></td>
+                <td></td>
+            </tr>
+                    </tbody></table>
+    </div>
+				
+	
+			 <?php
+                }
+                ?> 
+	  
+</form>
+        </div>
+     </div>
+					<?php 
+} ?>
+		</div>
+
+	</div>
+
+			</div>
+		</div>
+	</main>
+	<footer id="footer">
+		<div class="container-fluid">
+			<div class="footer-main">
+				<div class="d-block d-sm-flex justify-content-between mb-5">
+					<div class="footer-logo">
+						<a class="footer-brand" href="/">
+							<!--<img src="./assets/themes/lost-theme/images/logo.png" alt="Golden Online" width="132" class="img-fluid" />-->
+						</a>
+					</div>
+					<div class="footerToTop">
+						<a class="toTopStyle" id="scrollToTop">
+							<!--<img alt="" aria-hidden="true" src="./assets/themes/lost-theme/images/mini-logo.png">-->
+							Trở Lại Trang Đầu
+						</a>
+					</div>
+					<div class="footer-banner">
+						<a href="https://www.esrb.org/" target="_blank" rel="noopener noreferrer">
+							<img class="img-fluid" src="./assets/themes/lost-theme/images/ESRB-M.svg" alt="ESRB rated Teen for violence and blood" width="1">
+						</a>
+					</div>
+				</div>
+				<div class="d-block d-sm-flex justify-content-between">
+					<div style="width: 120px;"></div>
+					<div class="d-flex flex-column justify-content-center align-items-center row-gap-20">
+						<div class="d-flex flex-wrap align-items-center justify-content-center gap-30 footer-links">
+							<a href="/" class="footer-link">
+								Trang Chủ
+							</a>
+							<a href="/index2.php?mod=login" class="footer-link">
+								Đăng Nhập
+							</a>
+							<a href="/index2.php?mod=regsiter" class="footer-link">
+								Đăng Ký
+							</a>
+						</div>
+						<div class="footer-copyright">
+							<p>
+								© 2024 - 2025 <a href="https://www.facebook.com/groups/srothiendieu2025" target="_blank" rel="noopener">
+									Sro Thiên Điểu
+								</a>
+							</p>
+							<div>Liên Hệ <a href="https://www.facebook.com/bdtn96" title="Game Master" class="font-weight-bolder" target="_blank">Thanh Gin</a></div>
+						</div>
+						<div class="d-flex flex-wrap align-items-start justify-content-center justify-content-sm-start gap-30">
+						
+						</div>
+					</div>
+					<div class="social-networks">
+					
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script  crossorigin="anonymous" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script  src=".\assets\themes\js\app.js"></script>
+<script  src=".\assets\themes\plugins\toastr\js\toastr.min.js"></script>
+<script  src=".\assets\themes\js\custom.js"></script>
+<script  src=".\assets\themes\lost-theme\js\MVisionToggleClass.js"></script>
+<script  src=".\assets\themes\lost-theme\js\main.js"></script>
+<script  src=".\assets\js\function.js"></script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '543065328108476');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=543065328108476&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --> 
+
+<script type="text/javascript">
+	const serverTime = new Date( 2024, 12, 12, 13, 26, 49 );
+	const currentTimestamp = 1734006409 - Math.round( + new Date() / 1000 );
+    var ServerTime = serverTime;
+    var iTimeStamp = currentTimestamp;
+    startClockTimer('#idTimerClock');
+</script>
+
+<script>
+	$(function() {
+		$("[data-toggle='tooltip']").tooltip({
+			items: "[title]",
+			position: {
+				my: "left+10 center",
+				at: "right center"
+			},
+			content: function() {
+				let element = jQuery(this);
+				if (element.is("[title]")) {
+					return element.attr("title");
+				}
+			},
+			close: function(event, ui) {
+				$(".ui-helper-hidden-accessible").remove();
+			}
+		});
+	})
+</script>
+<script type="text/javascript">
+	function itemInfo() {
+		$(document).tooltip({
+			items: "[data-itemInfo], [title]",
+			position: {my: "left+5 center", at: "right center"},
+			content: function () {
+				let element = jQuery(this);
+				if (jQuery(this).prop("tagName").toUpperCase() === 'IFRAME') {
+					return;
+				}
+				if (element.is("[data-itemInfo]")) {
+					if (element.parent().parent().find('.itemInfo').html() === '') {
+						return;
+					}
+					return element.parent().parent().find('.itemInfo').html();
+				}
+				if (element.is("[title]")) {
+					return element.attr("title");
+				}
+			},
+			close: function (event, ui) {
+				$(".ui-helper-hidden-accessible").remove();
+			}
+		});
+	}
+
+	$(document).ready(function () {
+		itemInfo();
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Get the modal
+		var modal = document.getElementById("followUsDiscord");
+		let closeDiscord = getCookie('close_discord');
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close-discord")[0];
+		var close2 = document.getElementsByClassName("close-discord-modal")[0];
+
+		if (!closeDiscord || closeDiscord == null) {
+			modal.style.display = "block";
+		}
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+			setCookie("close_discord", 1, 1);
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		close2.onclick = function() {
+			modal.style.display = "none";
+			setCookie("close_discord", 1, 1);
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+				setCookie("close_discord", 1, 1);
+			}
+		}
+	});
+ window.onload = function() {
+        <?php if(strlen($notice) > 0): ?>
+            var title = "<?php echo $titlenotice; ?>";
+            var message = "<?php echo $notice; ?>";
+            var icon = "<?php echo $type; ?>";
+            var buttonText = "<?php echo $button; ?>";
+
+            swal({
+                title: title,
+                text: message,
+                icon: icon,
+                button: buttonText
+            });
+        <?php endif; ?>
+    };
+</script>
+<script>
+function formatInput(input) {
+    // Remove non-numeric characters except decimal point
+    let cleanedValue = input.value.replace(/[^\d.]/g, '');
+
+    // Handle case where cleanedValue is empty or results in 'NaN' after formatting
+    if (cleanedValue === '' || cleanedValue === 'NaN') {
+        input.value = '';
+    } else {
+        // Format as integer (no decimal places) with comma as thousands separator
+        let formattedValue = parseFloat(cleanedValue).toLocaleString('en-US', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
+
+        // Update the input value with the formatted number
+        input.value = formattedValue;
+    }
+}
+</script>
+</body>
+</html>

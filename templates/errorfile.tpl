@@ -1,0 +1,1 @@
+<!-- End Title -->            <!-- Content --><div class="pad10"><center>    	Vui Lòng Đăng Nhập Để Sử Dụng Tính Năng Này.<br>		</center>	<div class="clear">	</div></div><!-- End Content -->

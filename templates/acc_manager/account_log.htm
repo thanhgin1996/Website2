@@ -1,0 +1,81 @@
+<h3 class="widget-title">account log</h3>
+<hr/>
+
+<div style="margin: auto;width: 100%;">
+<div class="primary-block out-top-20">
+<div>
+<center><b>Địa chỉ IP hiện tại của bạn: <? echo $ip_client; ?></b></center>
+<? if ($log1 == 'login') {?>
+<table border="1" style="text-align: center; margin: auto;">
+<tbody>
+<tr><td>#</td><td>Tài khoản</td><td>Ip đăng nhập</td><td>Địa chỉ MAC</td><td>Loại</td><td>Thời gian đăng nhập</td></tr>
+<?php for($i=0;$i<$numrows;$i++) { ?>	
+<tr>
+<td><? echo $i + 1; ?></td>
+<td><? echo $getacc[$i][0]; ?></td>
+<td><? echo $getacc[$i][1]; ?></td>
+<td><? echo $getacc[$i][2]; ?></td>
+<td><? echo $getacc[$i][4]; ?></td>
+<td><? echo $getacc[$i][3]; ?></td>
+</tr>
+
+<?php } ?>	
+</tbody>
+</table>
+<?} elseif ($log1 == 'web'){?>
+<table border="1" style="text-align: center; margin: auto;">
+<tbody>
+<tr><td>#</td><td>Tài khoản</td><td>Hành động</td><td>Thời gian thực hiện</td><td>Địa chỉ IP</td></tr>
+<?php for($i=0;$i<$numrows;$i++) { ?>	
+<tr>
+<td><? echo $i + 1; ?></td>
+<td><? echo $getacc[$i][0]; ?></td>
+<td><? echo tcvn2uni(iconv('UCS-2LE', 'UTF-8', $getacc[$i][1])); ?></td>
+<td><? echo $getacc[$i][2]; ?></td>
+<td><? echo $getacc[$i][3]; ?></td>
+</tr>
+<?php } ?>	
+</tbody>
+</table>
+<?} elseif ($log1 == 'game'){?>
+<center><b>Chọn nhân vật cần xem lịch sử</b></center>
+<br/>
+<center><b>
+<?php for($i=0;$i<$numrows1;$i++) { ?>
+	<span style="padding: 5px 10px;border: solid 1px #f00;cursor: pointer;">
+		<a href="index.php?mod=acc_manager&act=account_log&log=game&c=<? echo $row[$i][0] ?>"><?php echo $row[$i][1] ?></a>
+	</span>
+<?php } ?>
+</b></center>
+<br/>
+<table border="1" style="text-align: center; margin: auto;">
+<tbody>
+<tr><td>#</td><td>Thời gian</td><td>Nhân vật</td><td>Hành động</td><td>Số luợng(?)</td><td>Ghi Chú(Mục tiêu)</td><td>Item Code</td></tr>
+<?php for($i=0;$i<$numrows;$i++) { ?>	
+<tr>
+<td><? echo $i + 1; ?></td>
+<td><? echo $getacc[$i][0]; ?></td>
+<td><? echo $getacc[$i][5]; ?></td>
+<td><? echo $getacc[$i][2]; ?></td>
+<td><? echo $getacc[$i][1]; ?></td>
+<td><? echo $getacc[$i][3]; ?></td>
+<td><? echo $getacc[$i][4]; ?></td>
+</tr>
+
+<?php } ?>	
+</tbody>
+</table>
+<?}?>
+</div></div></div>
+
+<style>
+td {
+    padding: 5px;
+}
+.container {
+    width: 100% !important;
+}
+.main.main-raised {
+    width: 100% !important;
+}
+</style>
